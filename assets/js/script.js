@@ -77,7 +77,8 @@ const resources = {
         contact_address: "Phường Phú Định, Thành phố Hồ Chí Minh",
         footer_copy: "© 2025 | Đặng Phạm Hồng Nhung. All rights reserved.",
         // Tiêu đề Dự án
-        proj_storestar_title: "StoreStar - Quản lý tồn kho",
+        // Tiêu đề Dự án
+        proj_storestar_title: "StoreStar - Smart Inventory Mgmt",
         proj_ba_title: "Business Process Analysis: TGDĐ Case Study",
         proj_samco_title: "System Analysis & Design: SAMCO Case Study",
         proj_erp_title: "ERP Implementation: SAP S/4HANA Case Study",
@@ -119,7 +120,8 @@ const resources = {
         contact_address: "Phu Dinh Ward, Ho Chi Minh City",
         footer_copy: "© 2025 | Dang Pham Hong Nhung. All rights reserved.",
         // Project Titles
-        proj_storestar_title: "StoreStar - Inventory Management",
+        // Project Titles
+        proj_storestar_title: "StoreStar - Smart Inventory Mgmt",
         proj_ba_title: "Business Process Analysis: TGDĐ Case Study",
         proj_samco_title: "System Analysis & Design: SAMCO Case Study",
         proj_erp_title: "ERP Implementation: SAP S/4HANA Case Study",
@@ -138,10 +140,10 @@ const resources = {
 const projectData = {
     storestar: {
         images: ["assets/img/KhoaLuanTotNghiep/dashboard.png", "assets/img/KhoaLuanTotNghiep/baocaokho.png", "assets/img/KhoaLuanTotNghiep/erd.png"],
-        title: { vi: "StoreStar - Quản lý tồn kho (Khóa luận - Điểm A+)", en: "StoreStar - Inventory Management (Thesis - A+ Grade)" },
+        title: { vi: "StoreStar - Smart Inventory Mgmt (Khóa luận tốt nghiệp)", en: "StoreStar - Smart Inventory Mgmt (Graduation Thesis)" },
         desc: {
-            vi: "<p class='highlight-text'><em>Dự án học thuật tập trung vào việc phân tích và tối ưu hóa quy trình dựa trên mô hình vận hành thực tế của doanh nghiệp.</em></p><br><ul><li><strong>Nghiệp vụ:</strong> Chuyển đổi quản lý thủ công sang tự động cho chuỗi Tin Học Ngôi Sao.</li><li><strong>Công nghệ:</strong> C# .NET, SQL Server, Crystal Reports.</li><li><strong>Công việc:</strong> Thiết kế DB 20+ bảng; Lập trình Nhập/Xuất, cảnh báo tồn và báo cáo tự động.</li></ul>",
-            en: "<p class='highlight-text'><em>Academic project focused on analyzing and optimizing processes based on real-world business operational models.</em></p><br><ul><li><strong>Business:</strong> Transformed manual management to automated for Tin Hoc Ngoi Sao chain.</li><li><strong>Tech:</strong> C# .NET, SQL Server, Crystal Reports.</li><li><strong>Tasks:</strong> Designed 20+ table DB; Programmed Import/Export, stock alerts, and automated reporting.</li></ul>"
+            vi: "<p class='highlight-text'><em>Dự án nghiên cứu và xây dựng giải pháp quản lý tồn kho dựa trên mô hình vận hành thực tế của chuỗi bán lẻ linh kiện máy tính.</em></p><br><ul><li><strong>Thành tích:</strong> Đạt điểm xuất sắc (A+).</li><li><strong>Nghiệp vụ:</strong> Chuyển đổi quản lý thủ công sang tự động cho chuỗi Tin Học Ngôi Sao.</li><li><strong>Công nghệ:</strong> C# .NET, SQL Server, Crystal Reports.</li><li><strong>Công việc:</strong> Thiết kế DB 20+ bảng; Lập trình Nhập/Xuất, cảnh báo tồn và báo cáo tự động.</li></ul>",
+            en: "<p class='highlight-text'><em>A Capstone Project focused on developing an inventory management solution based on real-world computer component retail models.</em></p><br><ul><li><strong>Achievement:</strong> Achieved Excellent Grade (A+).</li><li><strong>Business:</strong> Transformed manual management to automated for Tin Hoc Ngoi Sao chain.</li><li><strong>Tech:</strong> C# .NET, SQL Server, Crystal Reports.</li><li><strong>Tasks:</strong> Designed 20+ table DB; Programmed Import/Export, stock alerts, and automated reporting.</li></ul>"
         },
         link: "https://drive.google.com/file/d/1cft_ibgM5IoU3GSnApQOjH9duziAz3HP/view"
     },
