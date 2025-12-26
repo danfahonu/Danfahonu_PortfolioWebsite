@@ -78,9 +78,9 @@ const resources = {
         footer_copy: "© 2025 | Đặng Phạm Hồng Nhung. All rights reserved.",
         // Tiêu đề Dự án
         proj_storestar_title: "StoreStar - Quản lý tồn kho",
-        proj_ba_title: "Quy trình kho TGDĐ",
-        proj_samco_title: "Quản lý thiết bị SAMCO",
-        proj_erp_title: "SAP S/4HANA Global Bike",
+        proj_ba_title: "Business Process Analysis: TGDĐ Case Study",
+        proj_samco_title: "System Analysis & Design: SAMCO Case Study",
+        proj_erp_title: "ERP Implementation: SAP S/4HANA Case Study",
         proj_ui_title: "App Du lịch & Review",
         proj_sql_title: "Quản lý Sinh viên",
         proj_ecommerce_title: "Website Tumie Pet Shop",
@@ -120,9 +120,9 @@ const resources = {
         footer_copy: "© 2025 | Dang Pham Hong Nhung. All rights reserved.",
         // Project Titles
         proj_storestar_title: "StoreStar - Inventory Management",
-        proj_ba_title: "MWG Warehouse Process",
-        proj_samco_title: "SAMCO Equipment Mgmt",
-        proj_erp_title: "SAP S/4HANA Global Bike",
+        proj_ba_title: "Business Process Analysis: TGDĐ Case Study",
+        proj_samco_title: "System Analysis & Design: SAMCO Case Study",
+        proj_erp_title: "ERP Implementation: SAP S/4HANA Case Study",
         proj_ui_title: "Travel & Review App",
         proj_sql_title: "Student Management",
         proj_ecommerce_title: "Tumie Pet Shop Website",
@@ -131,42 +131,44 @@ const resources = {
     }
 };
 
-// ... (Các phần Project Data không đổi, giữ nguyên để tiết kiệm token hiển thị nhưng khi write file sẽ ghi đủ)
-// Dữ liệu Chi tiết Dự án (Bao gồm Link Google Drive)
+// Dữ liệu Chi tiết Dự án (Bao gồm Link Google Drive & Disclaimer)
+// Disclaimer VI: "Dự án học thuật tập trung vào việc phân tích và tối ưu hóa quy trình dựa trên mô hình vận hành thực tế của doanh nghiệp."
+// Disclaimer EN: "Academic project focused on analyzing and optimizing processes based on real-world business operational models."
+
 const projectData = {
     storestar: {
         images: ["assets/img/KhoaLuanTotNghiep/dashboard.png", "assets/img/KhoaLuanTotNghiep/baocaokho.png", "assets/img/KhoaLuanTotNghiep/erd.png"],
         title: { vi: "StoreStar - Quản lý tồn kho (Khóa luận - Điểm A+)", en: "StoreStar - Inventory Management (Thesis - A+ Grade)" },
         desc: {
-            vi: "<ul><li><strong>Nghiệp vụ:</strong> Chuyển đổi quản lý thủ công sang tự động cho chuỗi Tin Học Ngôi Sao.</li><li><strong>Công nghệ:</strong> C# .NET, SQL Server, Crystal Reports.</li><li><strong>Công việc:</strong> Thiết kế DB 20+ bảng; Lập trình Nhập/Xuất, cảnh báo tồn và báo cáo tự động.</li></ul>",
-            en: "<ul><li><strong>Business:</strong> Transformed manual management to automated for Tin Hoc Ngoi Sao chain.</li><li><strong>Tech:</strong> C# .NET, SQL Server, Crystal Reports.</li><li><strong>Tasks:</strong> Designed 20+ table DB; Programmed Import/Export, stock alerts, and automated reporting.</li></ul>"
+            vi: "<p class='highlight-text'><em>Dự án học thuật tập trung vào việc phân tích và tối ưu hóa quy trình dựa trên mô hình vận hành thực tế của doanh nghiệp.</em></p><br><ul><li><strong>Nghiệp vụ:</strong> Chuyển đổi quản lý thủ công sang tự động cho chuỗi Tin Học Ngôi Sao.</li><li><strong>Công nghệ:</strong> C# .NET, SQL Server, Crystal Reports.</li><li><strong>Công việc:</strong> Thiết kế DB 20+ bảng; Lập trình Nhập/Xuất, cảnh báo tồn và báo cáo tự động.</li></ul>",
+            en: "<p class='highlight-text'><em>Academic project focused on analyzing and optimizing processes based on real-world business operational models.</em></p><br><ul><li><strong>Business:</strong> Transformed manual management to automated for Tin Hoc Ngoi Sao chain.</li><li><strong>Tech:</strong> C# .NET, SQL Server, Crystal Reports.</li><li><strong>Tasks:</strong> Designed 20+ table DB; Programmed Import/Export, stock alerts, and automated reporting.</li></ul>"
         },
         link: "https://drive.google.com/file/d/1cft_ibgM5IoU3GSnApQOjH9duziAz3HP/view"
     },
     ba_tgdd: {
         images: ["assets/img/PhanTichNghiepVu/1.png", "assets/img/PhanTichNghiepVu/2.png", "assets/img/PhanTichNghiepVu/4.png"],
-        title: { vi: "Phân tích nghiệp vụ (BA) - Kho Thế Giới Di Động", en: "Business Analysis (BA) - Mobile World Warehouse" },
+        title: { vi: "Business Process Analysis: TGDĐ Case Study", en: "Business Process Analysis: TGDĐ Case Study" },
         desc: {
-            vi: "<ul><li><strong>Nghiệp vụ:</strong> Chuẩn hóa vận hành từ kho tổng đến cửa hàng bán lẻ.</li><li><strong>Công cụ:</strong> Visio, Draw.io, BPMN 2.0.</li><li><strong>Công việc:</strong> Vẽ luồng Nhập/Xuất/Trả hàng; Viết đặc tả SRS và User Stories.</li></ul>",
-            en: "<ul><li><strong>Business:</strong> Standardized operations from central warehouse to retail stores.</li><li><strong>Tools:</strong> Visio, Draw.io, BPMN 2.0.</li><li><strong>Tasks:</strong> Mapped Import/Export/Return flows; Wrote SRS specs and User Stories.</li></ul>"
+            vi: "<p class='highlight-text'><em>Dự án học thuật tập trung vào việc phân tích và tối ưu hóa quy trình dựa trên mô hình vận hành thực tế của doanh nghiệp.</em></p><br><ul><li><strong>Nghiệp vụ:</strong> Chuẩn hóa vận hành từ kho tổng đến cửa hàng bán lẻ.</li><li><strong>Công cụ:</strong> Visio, Draw.io, BPMN 2.0.</li><li><strong>Công việc:</strong> Vẽ luồng Nhập/Xuất/Trả hàng; Viết đặc tả SRS và User Stories.</li></ul>",
+            en: "<p class='highlight-text'><em>Academic project focused on analyzing and optimizing processes based on real-world business operational models.</em></p><br><ul><li><strong>Business:</strong> Standardized operations from central warehouse to retail stores.</li><li><strong>Tools:</strong> Visio, Draw.io, BPMN 2.0.</li><li><strong>Tasks:</strong> Mapped Import/Export/Return flows; Wrote SRS specs and User Stories.</li></ul>"
         },
         link: "https://drive.google.com/file/d/1xaRDl-yU8ICAJUWNvsKtnuijAQgVJgrR/view"
     },
     sad_samco: {
         images: ["assets/img/PhanTichThietKeHTTT/1.png", "assets/img/PhanTichThietKeHTTT/2.png", "assets/img/PhanTichThietKeHTTT/3.png", "assets/img/PhanTichThietKeHTTT/4.png", "assets/img/PhanTichThietKeHTTT/5.png"],
-        title: { vi: "Quản lý thiết bị SAMCO (Phân tích & Thiết kế HTTT)", en: "SAMCO Equipment Mgmt (System Analysis & Design)" },
+        title: { vi: "System Analysis & Design: SAMCO Case Study", en: "System Analysis & Design: SAMCO Case Study" },
         desc: {
-            vi: "<ul><li><strong>Nghiệp vụ:</strong> Quản lý bảo trì máy móc tại SAMCO.</li><li><strong>Vai trò:</strong> System Analyst. Thiết kế UML (Use Case, Sequence, Activity) và Prototype Figma.</li></ul>",
-            en: "<ul><li><strong>Business:</strong> Managed machinery maintenance at SAMCO.</li><li><strong>Role:</strong> System Analyst. Designed UML (Use Case, Sequence, Activity) and Figma Prototype.</li></ul>"
+            vi: "<p class='highlight-text'><em>Dự án học thuật tập trung vào việc phân tích và tối ưu hóa quy trình dựa trên mô hình vận hành thực tế của doanh nghiệp.</em></p><br><ul><li><strong>Nghiệp vụ:</strong> Quản lý bảo trì máy móc tại SAMCO.</li><li><strong>Vai trò:</strong> System Analyst. Thiết kế UML (Use Case, Sequence, Activity) và Prototype Figma.</li></ul>",
+            en: "<p class='highlight-text'><em>Academic project focused on analyzing and optimizing processes based on real-world business operational models.</em></p><br><ul><li><strong>Business:</strong> Managed machinery maintenance at SAMCO.</li><li><strong>Role:</strong> System Analyst. Designed UML (Use Case, Sequence, Activity) and Figma Prototype.</li></ul>"
         },
         link: "https://drive.google.com/file/d/1VcgFCFcAB95Fhf8PVkwd9USFr_6PiXV9/view"
     },
     erp_sap: {
         images: ["assets/img/ERP/1.png", "assets/img/ERP/2.png", "assets/img/ERP/5.png"],
-        title: { vi: "SAP S/4HANA Global Bike (Hệ thống ERP)", en: "SAP S/4HANA Global Bike (ERP System)" },
+        title: { vi: "ERP Implementation: SAP S/4HANA Case Study", en: "ERP Implementation: SAP S/4HANA Case Study" },
         desc: {
-            vi: "<ul><li><strong>Nội dung:</strong> Triển khai quy trình tích hợp qua phân hệ MM, SD, FI.</li><li><strong>Kỹ năng:</strong> Thực hiện chu trình P2P, O2C; Quản lý Master Data; Hiểu logic hạch toán kế toán tự động.</li></ul>",
-            en: "<ul><li><strong>Content:</strong> Implemented integrated processes via MM, SD, FI modules.</li><li><strong>Skills:</strong> Executed P2P, O2C cycles; Managed Master Data; Understood automated accounting logic.</li></ul>"
+            vi: "<p class='highlight-text'><em>Dự án học thuật tập trung vào việc phân tích và tối ưu hóa quy trình dựa trên mô hình vận hành thực tế của doanh nghiệp.</em></p><br><ul><li><strong>Nội dung:</strong> Triển khai quy trình tích hợp qua phân hệ MM, SD, FI.</li><li><strong>Kỹ năng:</strong> Thực hiện chu trình P2P, O2C; Quản lý Master Data; Hiểu logic hạch toán kế toán tự động.</li></ul>",
+            en: "<p class='highlight-text'><em>Academic project focused on analyzing and optimizing processes based on real-world business operational models.</em></p><br><ul><li><strong>Content:</strong> Implemented integrated processes via MM, SD, FI modules.</li><li><strong>Skills:</strong> Executed P2P, O2C cycles; Managed Master Data; Understood automated accounting logic.</li></ul>"
         },
         link: "https://drive.google.com/file/d/19mS_SiMnkVHAWgShqboiJZuFKNlBdU6X/view"
     },
@@ -174,8 +176,8 @@ const projectData = {
         images: ["assets/img/UXUI/1.png", "assets/img/UXUI/2.png", "assets/img/UXUI/3.png"],
         title: { vi: "App Du lịch & Review (Thiết kế UI/UX)", en: "Travel & Review App (UI/UX Design)" },
         desc: {
-            vi: "<ul><li><strong>Công cụ:</strong> Figma. Thiết kế Wireframe & Prototype 30+ màn hình; Xây dựng Design System chuyên nghiệp.</li></ul>",
-            en: "<ul><li><strong>Tools:</strong> Figma. Designed Wireframes & Prototypes for 30+ screens; Built a professional Design System.</li></ul>"
+            vi: "<p class='highlight-text'><em>Dự án học thuật tập trung vào việc phân tích và tối ưu hóa quy trình dựa trên mô hình vận hành thực tế của doanh nghiệp.</em></p><br><ul><li><strong>Công cụ:</strong> Figma. Thiết kế Wireframe & Prototype 30+ màn hình; Xây dựng Design System chuyên nghiệp.</li></ul>",
+            en: "<p class='highlight-text'><em>Academic project focused on analyzing and optimizing processes based on real-world business operational models.</em></p><br><ul><li><strong>Tools:</strong> Figma. Designed Wireframes & Prototypes for 30+ screens; Built a professional Design System.</li></ul>"
         },
         link: "https://drive.google.com/file/d/1zHuhjLbq00r17bHHkg65I3LO8AKu-k-8/view",
         demo_link: "https://drive.google.com/file/d/1GmGjYEIAwL4vGXbC2Re9RYpRLTJYdEPd/view"
@@ -184,8 +186,8 @@ const projectData = {
         images: ["assets/img/SQLServer/1.png", "assets/img/SQLServer/2.png", "assets/img/SQLServer/3.png", "assets/img/SQLServer/4.png", "assets/img/SQLServer/5.png", "assets/img/SQLServer/6.png"],
         title: { vi: "Quản lý Sinh viên (SQL Server)", en: "Student Management (SQL Server)" },
         desc: {
-            vi: "<ul><li><strong>Nội dung:</strong> Thiết kế ERD chuẩn 3NF; Viết Stored Procedures & Triggers kiểm soát ràng buộc dữ liệu tự động.</li></ul>",
-            en: "<ul><li><strong>Content:</strong> Designed 3NF ERD; Wrote Stored Procedures & Triggers for automated data constraint control.</li></ul>"
+            vi: "<p class='highlight-text'><em>Dự án học thuật tập trung vào việc phân tích và tối ưu hóa quy trình dựa trên mô hình vận hành thực tế của doanh nghiệp.</em></p><br><ul><li><strong>Nội dung:</strong> Thiết kế ERD chuẩn 3NF; Viết Stored Procedures & Triggers kiểm soát ràng buộc dữ liệu tự động.</li></ul>",
+            en: "<p class='highlight-text'><em>Academic project focused on analyzing and optimizing processes based on real-world business operational models.</em></p><br><ul><li><strong>Content:</strong> Designed 3NF ERD; Wrote Stored Procedures & Triggers for automated data constraint control.</li></ul>"
         },
         link: "https://drive.google.com/file/d/11vp1abXNB6vg-oSj1C0hbIVTRoNXb4mb/view"
     },
@@ -193,8 +195,8 @@ const projectData = {
         images: ["assets/img/ThuongMaiDienTu/1.png", "assets/img/ThuongMaiDienTu/2.png", "assets/img/ThuongMaiDienTu/3.png"],
         title: { vi: "Website Tumie Pet Shop (Thương mại điện tử)", en: "Tumie Pet Shop Website (E-Commerce)" },
         desc: {
-            vi: "<ul><li><strong>Nội dung:</strong> Xây dựng mô hình kinh doanh Canvas, triển khai Website bán hàng trên Wordpress.</li></ul>",
-            en: "<ul><li><strong>Content:</strong> Built Canvas business model, deployed sales website on Wordpress.</li></ul>"
+            vi: "<p class='highlight-text'><em>Dự án học thuật tập trung vào việc phân tích và tối ưu hóa quy trình dựa trên mô hình vận hành thực tế của doanh nghiệp.</em></p><br><ul><li><strong>Nội dung:</strong> Xây dựng mô hình kinh doanh Canvas, triển khai Website bán hàng trên Wordpress.</li></ul>",
+            en: "<p class='highlight-text'><em>Academic project focused on analyzing and optimizing processes based on real-world business operational models.</em></p><br><ul><li><strong>Content:</strong> Built Canvas business model, deployed sales website on Wordpress.</li></ul>"
         },
         link: "https://drive.google.com/file/d/1sTgL761Jc9NrRRCc6MB8FR9wLW_OZihw/view"
     },
@@ -202,8 +204,8 @@ const projectData = {
         images: ["assets/img/MangMayTinh/1.png", "assets/img/MangMayTinh/2.png", "assets/img/MangMayTinh/3.png"],
         title: { vi: "Mạng doanh nghiệp SMB", en: "SMB Enterprise Network" },
         desc: {
-            vi: "<ul><li><strong>Công cụ:</strong> Cisco Packet Tracer. Thiết kế và cấu hình mạng nội bộ, VLAN, định tuyến OSPF.</li></ul>",
-            en: "<ul><li><strong>Tools:</strong> Cisco Packet Tracer. Designed and configured LAN, VLAN, OSPF routing.</li></ul>"
+            vi: "<p class='highlight-text'><em>Dự án học thuật tập trung vào việc phân tích và tối ưu hóa quy trình dựa trên mô hình vận hành thực tế của doanh nghiệp.</em></p><br><ul><li><strong>Công cụ:</strong> Cisco Packet Tracer. Thiết kế và cấu hình mạng nội bộ, VLAN, định tuyến OSPF.</li></ul>",
+            en: "<p class='highlight-text'><em>Academic project focused on analyzing and optimizing processes based on real-world business operational models.</em></p><br><ul><li><strong>Tools:</strong> Cisco Packet Tracer. Designed and configured LAN, VLAN, OSPF routing.</li></ul>"
         },
         link: "https://docs.google.com/document/d/1SwsE9AYvIQA0lt78ommTriat8JaSRiRY/edit"
     },
@@ -211,14 +213,13 @@ const projectData = {
         images: ["assets/img/DienToanDamMay/1.png"],
         title: { vi: "Nền tảng công nghệ Amazon", en: "Amazon Cloud Platform" },
         desc: {
-            vi: "<ul><li><strong>Nội dung:</strong> Tìm hiểu và triển khai các dịch vụ cơ bản của AWS (EC2, S3, RDS).</li></ul>",
-            en: "<ul><li><strong>Content:</strong> Researched and deployed basic AWS services (EC2, S3, RDS).</li></ul>"
+            vi: "<p class='highlight-text'><em>Dự án học thuật tập trung vào việc phân tích và tối ưu hóa quy trình dựa trên mô hình vận hành thực tế của doanh nghiệp.</em></p><br><ul><li><strong>Nội dung:</strong> Tìm hiểu và triển khai các dịch vụ cơ bản của AWS (EC2, S3, RDS).</li></ul>",
+            en: "<p class='highlight-text'><em>Academic project focused on analyzing and optimizing processes based on real-world business operational models.</em></p><br><ul><li><strong>Content:</strong> Researched and deployed basic AWS services (EC2, S3, RDS).</li></ul>"
         },
         link: "https://drive.google.com/file/d/1YZH1LNKEQMFZM86DsGZui2twxv_quApY/view"
     }
 };
 
-// ... (Các hàm Modal giữ nguyên)
 // Hàm mở Modal Dự án
 let currentProject = null;
 let currentSlideIndex = 0;
