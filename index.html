@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dang Pham Hong Nhung | Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/cv.png">
+
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body data-theme="light">
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Nhung Dang.</a>
+                <ul class="nav-links">
+                    <li><a href="#home" data-i18n="nav_home">Trang chủ</a></li>
+                    <li><a href="#about" data-i18n="nav_about">Giới thiệu</a></li>
+                    <li><a href="#projects" data-i18n="nav_projects">Dự án</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">Liên hệ</a></li>
+                </ul>
+                <div class="controls">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+                        <i class="fas fa-globe"></i> <span id="lang-text">EN</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text" data-aos="fade-right">
+                    <h3 data-i18n="hero_role">Mình là Đặng Phạm Hồng Nhung</h3>
+                    <h1 data-i18n="hero_sub">Business Analyst | Triển khai ERP | BrSE</h1>
+                    <p data-i18n="hero_desc">Mình là sinh viên năm cuối ngành Hệ thống thông tin quản lý, chuyên ngành
+                        Hệ thống thông tin kế toán tại UFM. Hiện tại đang chờ bằng tốt nghiệp và có thể bắt đầu công
+                        việc Full-time ngay lập tức. Với tinh thần cầu tiến và mong muốn được gắn bó lâu dài, mình luôn
+                        sẵn sàng bắt đầu từ những vị trí thực tập/fresher để học hỏi, ứng dụng kiến thức vào thực tế
+                        nhằm tạo ra giá trị cho quý công ty. Mình cũng rất sẵn sàng đi công tác để hỗ trợ dự án khi có
+                        yêu cầu.</p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn"><i class="fas fa-eye"></i> <span data-i18n="btn_projects">Xem Dự
+                                Án</span></a>
+                        <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> <span
+                                data-i18n="nav_contact">Liên hệ</span></a>
+                    </div>
+                </div>
+                <div class="hero-img" data-aos="fade-left">
+                    <img src="assets/img/cv2.jpg" alt="Dang Pham Hong Nhung" id="profile-img"
+                        style="transition: opacity 0.5s ease-in-out; opacity: 1;">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding" style="padding: 100px 0;">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2 data-i18n="about_title">Về Bản Thân</h2>
+                    <span></span>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Education & Experience -->
+                    <div class="about-timeline" data-aos="fade-up" data-aos-delay="100">
+                        <!-- Education -->
+                        <div class="timeline-group" style="margin-bottom: 40px;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 20px;"><i
+                                    class="fas fa-graduation-cap"></i> <span data-i18n="edu_title">Học Vấn</span></h4>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <span class="timeline-date">2022 - 2026</span>
+                                    <div class="timeline-content">
+                                        <h4 data-i18n="edu_sch">Đại học Tài chính - Marketing (UFM)</h4>
+                                        <p data-i18n="edu_major">Ngành: Hệ thống thông tin quản lý</p>
+                                        <p data-i18n="edu_spec">Chuyên ngành: Hệ thống thông tin kế toán</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience -->
+                        <div class="timeline-group">
+                            <h4 style="color: var(--primary-color); margin-bottom: 20px;"><i
+                                    class="fas fa-briefcase"></i> <span data-i18n="exp_title">Kinh Nghiệm</span></h4>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <span class="timeline-date">09/2025 - 11/2025</span>
+                                    <div class="timeline-content">
+                                        <h4 data-i18n="exp_company">Công ty Cổ phần Công nghệ Sapo</h4>
+                                        <p style="font-style: italic; margin-bottom: 5px;" data-i18n="exp_role">Thực tập
+                                            sinh Tư vấn triển khai</p>
+                                        <p data-i18n="exp_desc">Hỗ trợ triển khai hệ thống và phối hợp cùng Sales tư vấn
+                                            giải pháp.</p>
+                                        <div style="margin-top: 10px; display: flex; gap: 10px;">
+                                            <img src="assets/img/exp1.jpg" alt="Sapo Experience 1"
+                                                style="width: 100px; height: 70px; object-fit: cover; border-radius: 5px; cursor: pointer;"
+                                                onclick="openImageModal(this)">
+                                            <img src="assets/img/exp2.jpg" alt="Sapo Experience 2"
+                                                style="width: 100px; height: 70px; object-fit: cover; border-radius: 5px; cursor: pointer;"
+                                                onclick="openImageModal(this)">
+                                            <img src="assets/img/exp3.jpg" alt="Sapo Experience 3"
+                                                style="width: 100px; height: 70px; object-fit: cover; border-radius: 5px; cursor: pointer;"
+                                                onclick="openImageModal(this)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="about-skills" data-aos="fade-up" data-aos-delay="200">
+                        <h4 data-i18n="skills_title">Kỹ Năng</h4>
+                        <div class="skills-container">
+                            <span class="skill-tag">Business Analysis (BA)</span>
+                            <span class="skill-tag">BPMN / UML Design</span>
+                            <span class="skill-tag">SQL Server (Database Design)</span>
+                            <span class="skill-tag">UI/UX Design (Figma)</span>
+                            <span class="skill-tag">C# .NET / WinForms</span>
+                            <span class="skill-tag">SAP ERP (Data entry & Global Bike Case Study)</span>
+                        </div>
+
+                        <h4 style="margin-top: 30px;" data-i18n="lang_title">Ngoại Ngữ</h4>
+                        <div class="skills-container">
+                            <span class="skill-tag" id="english-cert-btn"
+                                style="cursor: pointer; text-decoration: underline; color: var(--primary-color);">English
+                                (B2 Aptis) <i class="fas fa-external-link-alt" style="font-size: 0.8em;"></i></span>
+                        </div>
+                        <!-- Certificate Image is now in Modal -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Goals Section -->
+        <section id="goals" class="section-padding" style="padding: 50px 0; background-color: var(--bg-card);">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2 data-i18n="goals_title">Mục Tiêu Tương Lai</h2>
+                    <span></span>
+                </div>
+                <div class="goals-content" data-aos="fade-up" data-aos-delay="100">
+                    <p data-i18n="goals_desc"
+                        style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
+                        Mình luôn nỗ lực không ngừng để học hỏi những kiến thức mới phục vụ cho công việc. Hiện tại,
+                        mình đang dành thời gian tìm hiểu về AI và Automation Workflow (n8n) để tối ưu hóa các quy trình
+                        nghiệp vụ. Mình mong muốn tìm kiếm một môi trường chuyên nghiệp để có thể gắn bó, phát triển bền
+                        vững và cùng công ty chinh phục những mục tiêu lớn hơn.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding" style="padding: 50px 0 100px;">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2 data-i18n="projects_title">Dự Án Tiêu Biểu</h2>
+                    <span></span>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project Cards with IDs -->
+                    <!-- 1. StoreStar -->
+                    <div class="project-card" data-aos="fade-up" onclick="openProjectModal('storestar')">
+                        <div class="project-img">
+                            <img src="assets/img/KhoaLuanTotNghiep/dashboard.png" alt="StoreStar"
+                                onerror="this.src='https://via.placeholder.com/400x250?text=StoreStar'">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">WinForms App</div>
+                            <h3 data-i18n="proj_storestar_title">StoreStar - Quản lý tồn kho</h3>
+                            <a href="javascript:void(0)" class="project-link"><span data-i18n="view_detail">Xem chi
+                                    tiết</span> <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 2. BA (TGDD) -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100"
+                        onclick="openProjectModal('ba_tgdd')">
+                        <div class="project-img">
+                            <img src="assets/img/PhanTichNghiepVu/1.png" alt="BA TGDD"
+                                onerror="this.src='https://via.placeholder.com/400x250?text=Analysis'">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Business Analysis</div>
+                            <h3 data-i18n="proj_ba_title">Quy trình kho TGDĐ</h3>
+                            <a href="javascript:void(0)" class="project-link"><span data-i18n="view_detail">Xem chi
+                                    tiết</span> <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 3. System Design (SAMCO) -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200"
+                        onclick="openProjectModal('sad_samco')">
+                        <div class="project-img">
+                            <img src="assets/img/PhanTichThietKeHTTT/1.png" alt="SAMCO"
+                                onerror="this.src='https://via.placeholder.com/400x250?text=System+Design'">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">System Design</div>
+                            <h3 data-i18n="proj_samco_title">Quản lý thiết bị SAMCO</h3>
+                            <a href="javascript:void(0)" class="project-link"><span data-i18n="view_detail">Xem chi
+                                    tiết</span> <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 4. ERP (SAP) -->
+                    <div class="project-card" data-aos="fade-up" onclick="openProjectModal('erp_sap')">
+                        <div class="project-img">
+                            <img src="assets/img/ERP/1.png" alt="ERP SAP"
+                                onerror="this.src='https://via.placeholder.com/400x250?text=ERP'">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">ERP Implementation</div>
+                            <h3 data-i18n="proj_erp_title">SAP S/4HANA Global Bike</h3>
+                            <a href="javascript:void(0)" class="project-link"><span data-i18n="view_detail">Xem chi
+                                    tiết</span> <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 5. UX/UI (Travel App) -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100"
+                        onclick="openProjectModal('uxui_travel')">
+                        <div class="project-img">
+                            <img src="assets/img/UXUI/1.png" alt="Travel App"
+                                onerror="this.src='https://via.placeholder.com/400x250?text=UX/UI'">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">UX/UI Design</div>
+                            <h3 data-i18n="proj_ui_title">App Du lịch & Review</h3>
+                            <a href="javascript:void(0)" class="project-link"><span data-i18n="view_detail">Xem chi
+                                    tiết</span> <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 6. SQL (Student Mgmt) -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200"
+                        onclick="openProjectModal('sql_student')">
+                        <div class="project-img">
+                            <img src="assets/img/SQLServer/1.png" alt="SQL Server"
+                                onerror="this.src='https://via.placeholder.com/400x250?text=SQL+Server'">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Database</div>
+                            <h3 data-i18n="proj_sql_title">Quản lý Sinh viên</h3>
+                            <a href="javascript:void(0)" class="project-link"><span data-i18n="view_detail">Xem chi
+                                    tiết</span> <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 7. Thuong Mai Dien Tu (Tumie) -->
+                    <div class="project-card" data-aos="fade-up" onclick="openProjectModal('ecommerce_tumie')">
+                        <div class="project-img">
+                            <img src="assets/img/ThuongMaiDienTu/1.png" alt="Ecommerce"
+                                onerror="this.src='https://via.placeholder.com/400x250?text=Ecommerce'">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">E-Commerce</div>
+                            <h3 data-i18n="proj_ecommerce_title">Website Tumie Pet Shop</h3>
+                            <a href="javascript:void(0)" class="project-link"><span data-i18n="view_detail">Xem chi
+                                    tiết</span> <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 8. Mang May Tinh -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100"
+                        onclick="openProjectModal('network_smb')">
+                        <div class="project-img">
+                            <img src="assets/img/MangMayTinh/1.png" alt="Network"
+                                onerror="this.src='https://via.placeholder.com/400x250?text=Network'">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Network Infra</div>
+                            <h3 data-i18n="proj_network_title">Mạng doanh nghiệp SMB</h3>
+                            <a href="javascript:void(0)" class="project-link"><span data-i18n="view_detail">Xem chi
+                                    tiết</span> <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- 9. Dien Toan Dam May -->
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200"
+                        onclick="openProjectModal('cloud_aws')">
+                        <div class="project-img">
+                            <img src="assets/img/DienToanDamMay/1.png" alt="Cloud Computing"
+                                onerror="this.src='https://via.placeholder.com/400x250?text=AWS'">
+                        </div>
+                        <div class="project-content">
+                            <div class="project-category">Cloud Computing</div>
+                            <h3 data-i18n="proj_cloud_title">Nền tảng công nghệ Amazon</h3>
+                            <a href="javascript:void(0)" class="project-link"><span data-i18n="view_detail">Xem chi
+                                    tiết</span> <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2 data-i18n="contact_title">Liên Hệ</h2>
+                    <span></span>
+                </div>
+
+                <div class="contact-content" style="text-align: center;" data-aos="fade-up">
+                    <p style="margin-bottom: 15px; font-size: 1.1rem;"><i class="fas fa-map-marker-alt"
+                            style="color: var(--primary-color); margin-right: 10px;"></i> <span
+                            data-i18n="contact_address">Phường Phú Định, Thành phố Hồ Chí Minh</span></p>
+                    <p style="margin-bottom: 15px; font-size: 1.1rem;"><i class="fas fa-envelope"
+                            style="color: var(--primary-color); margin-right: 10px;"></i> <a
+                            href="mailto:nhungdangagcd2004@gmail.com"
+                            style="color: var(--text-main);">nhungdangagcd2004@gmail.com</a></p>
+                    <p style="margin-bottom: 30px; font-size: 1.1rem;"><i class="fas fa-phone-alt"
+                            style="color: var(--primary-color); margin-right: 10px;"></i> 0962 916 648</p>
+
+                    <div class="footer-social" style="justify-content: center; margin-top: 20px;">
+                        <a href="https://www.facebook.com/DangPhamHongNhung/" target="_blank" class="social-link"
+                            style="color: var(--text-main)"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/dangphamhongnhung/" target="_blank" class="social-link"
+                            style="color: var(--text-main)"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/danfahonu" target="_blank" class="social-link"
+                            style="color: var(--text-main)"><i class="fab fa-github"></i></a>
+                        <a href="https://zalo.me/0962916648" target="_blank" class="social-link"
+                            style="color: var(--text-main)"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 100 100" width="1em" height="1em" fill="currentColor"
+                                style="vertical-align: -0.125em;">
+                                <defs>
+                                    <mask id="zalo-mask">
+                                        <rect width="100" height="100" fill="white" />
+                                        <text x="50" y="68" font-family="Arial, sans-serif" font-weight="900"
+                                            font-size="45" text-anchor="middle" letter-spacing="-2"
+                                            fill="black">Zalo</text>
+                                    </mask>
+                                </defs>
+                                <rect width="100" height="100" rx="20" mask="url(#zalo-mask)" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p data-i18n="footer_copy">© 2025 | Đặng Phạm Hồng Nhung. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Certificate Modal (Single Image) -->
+    <div id="cert-modal" class="modal">
+        <span class="close-modal" onclick="closeModal('cert-modal')">&times;</span>
+        <img class="modal-content" id="cert-img">
+        <div id="caption" data-i18n="cert_caption">Chứng chỉ Tiếng Anh (B2 Aptis)</div>
+    </div>
+
+    <!-- Project Details Modal (Slider) -->
+    <div id="project-modal" class="modal">
+        <span class="close-modal" onclick="closeModal('project-modal')">&times;</span>
+        <div class="modal-content project-modal-content">
+            <div class="modal-slider">
+                <div class="slider-container" id="project-slider-container">
+                    <!-- Images injected via JS -->
+                </div>
+                <button class="slider-btn prev" onclick="moveSlider(-1)">&#10094;</button>
+                <button class="slider-btn next" onclick="moveSlider(1)">&#10095;</button>
+            </div>
+            <div class="modal-info">
+                <h2 id="modal-title">Project Title</h2>
+                <div id="modal-desc">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
