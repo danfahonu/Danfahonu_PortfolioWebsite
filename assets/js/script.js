@@ -51,13 +51,20 @@ const resources = {
         nav_projects: "Dự án",
         nav_contact: "Liên hệ",
         hero_role: "Mình là Đặng Phạm Hồng Nhung",
-        hero_sub: ["Business Analyst", "Triển khai ERP", "BrSE"], // Mảng các vai trò
+        hero_sub: ["Business Analyst", "Data Analyst", "Triển khai ERP"], // Mảng các vai trò
         hero_desc: "Mình là sinh viên năm cuối ngành Hệ thống thông tin quản lý, chuyên ngành Hệ thống thông tin kế toán tại UFM. Hiện tại đang chờ bằng tốt nghiệp và có thể bắt đầu công việc Full-time ngay lập tức. Với tinh thần cầu tiến và mong muốn được gắn bó lâu dài, mình luôn sẵn sàng bắt đầu từ những vị trí thực tập/fresher để học hỏi, ứng dụng kiến thức vào thực tế nhằm tạo ra giá trị cho quý công ty. Mình cũng rất sẵn sàng đi công tác để hỗ trợ dự án khi có yêu cầu.",
         btn_projects: "Xem Dự Án",
         btn_cv: "Xem CV",
+        btn_download_cv: "Tải CV",
         view_detail: "Xem chi tiết",
         view_drive: "Xem chi tiết trên Google Drive",
         view_demo: "Xem Demo Thuyết trình UXUI",
+        form_name: "Họ và tên",
+        form_phone: "Số điện thoại",
+        form_message: "Nội dung tin nhắn",
+        form_submit: "Gửi tin nhắn",
+        form_success: "✅ Cảm ơn! Tin nhắn đã được gửi thành công.",
+        form_error: "❌ Có lỗi xảy ra. Vui lòng thử lại hoặc email trực tiếp.",
         about_title: "Về Bản Thân",
         edu_title: "Học Vấn",
         edu_sch: "Đại học Tài chính - Marketing (UFM)",
@@ -94,13 +101,20 @@ const resources = {
         nav_projects: "Projects",
         nav_contact: "Contact",
         hero_role: "Hello there! I'm Nhung",
-        hero_sub: ["Business Analyst", "ERP Implementation", "BrSE"], // Roles array
+        hero_sub: ["Business Analyst", "Data Analyst", "ERP Implementation"], // Roles array
         hero_desc: "I'm a final-year MIS student at UFM, specializing in Accounting Information Systems. I am currently awaiting my degree and available for full-time positions. My goal is to build a long-term career where I can apply my knowledge to create real value for the company. I am highly motivated, eager to learn new skills, and fully prepared for business travel to support project needs.",
         btn_projects: "View Projects",
         btn_cv: "View CV",
+        btn_download_cv: "Download CV",
         view_detail: "View Details",
         view_drive: "View Details on Google Drive",
         view_demo: "View UXUI Presentation Demo",
+        form_name: "Full Name",
+        form_phone: "Phone Number",
+        form_message: "Your Message",
+        form_submit: "Send Message",
+        form_success: "✅ Thank you! Your message has been sent successfully.",
+        form_error: "❌ An error occurred. Please try again or email directly.",
         about_title: "About Me",
         edu_title: "Education",
         edu_sch: "University of Finance - Marketing (UFM)",
@@ -513,3 +527,136 @@ setInterval(() => {
         }, 500); // Khớp với thời gian transition CSS
     }
 }, 4000); // Đổi mỗi 4 giây
+
+// Hamburger Menu Toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking nav link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+}
+
+// Contact Form Submission Handler
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = contactForm.querySelector('.btn-submit');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.classList.add('btn-loading');
+        submitBtn.disabled = true;
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                const lang = localStorage.getItem('lang') || 'vi';
+                formStatus.className = 'form-status success';
+                formStatus.textContent = resources[lang]['form_success'];
+                contactForm.reset();
+
+                // Track form submission in Analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_submit', {
+                        'event_category': 'engagement',
+                        'event_label': 'Contact Form'
+                    });
+                }
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            const lang = localStorage.getItem('lang') || 'vi';
+            formStatus.className = 'form-status error';
+            formStatus.textContent = resources[lang]['form_error'];
+        } finally {
+            submitBtn.classList.remove('btn-loading');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+        }
+    });
+}
+
+// Update HTML lang attribute when language changes  
+const originalUpdateLanguage = updateLanguage;
+function updateLanguage(lang) {
+    // Update HTML lang attribute
+    document.documentElement.lang = lang;
+
+    // Call original function
+    langText.textContent = lang === 'en' ? 'VI' : 'EN';
+    localStorage.setItem('lang', lang);
+
+    // Cập nhật nội dung tĩnh
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (resources[lang][key]) {
+            // Xử lý riêng cho hero_desc (Typing Intro)
+            if (key === 'hero_desc') {
+                startTypingEffect(element, resources[lang][key]);
+            }
+            // Xử lý riêng cho hero_sub (Typing Roles) - Kiểm tra nếu là mảng
+            else if (key === 'hero_sub' && Array.isArray(resources[lang][key])) {
+                startRoleTypingEffect(element, resources[lang][key]);
+            }
+            // Các text thông thường
+            else {
+                element.textContent = resources[lang][key];
+            }
+        }
+    });
+
+    // Cập nhật Modal nếu đang mở
+    const modal = document.getElementById('project-modal');
+    if (modal.style.display === 'block' && currentProject) {
+        document.getElementById('modal-title').textContent = currentProject.title[lang];
+        document.getElementById('modal-desc').innerHTML = currentProject.desc[lang];
+        const modalLink = document.getElementById('modal-link');
+        if (modalLink) modalLink.querySelector('span').textContent = resources[lang]['view_drive'];
+        const modalDemo = document.getElementById('modal-demo');
+        if (modalDemo) modalDemo.querySelector('span').textContent = resources[lang]['view_demo'];
+    }
+}
+
+// Track CV downloads
+const cvBtn = document.querySelector('.btn-cv');
+if (cvBtn) {
+    cvBtn.addEventListener('click', () => {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'cv_download', {
+                'event_category': 'engagement',
+                'event_label': 'CV Download'
+            });
+        }
+    });
+}

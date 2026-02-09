@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://danfahonu-portfolio.vercel.app/sitemap.xml
